@@ -43,8 +43,14 @@ jobs:
       - name: Run Unit Tests
         run: mvn '-Dtest=*Test' verify
 
+  package-jacoco-result:
+
+    runs-on: ubuntu-latest
+    
+    steps:
       - name: Upload Jacoco Coverage Result
-        uses: actions/upload-artifact@v2
+      - uses: actions/checkout@v2
+      - uses: papeloto/action-zip@v1
         with:
-          name: jacoco-coverage-report.html
-          path: /home/runner/work/validator/validator/target/site/jacoco/index.html
+          files: /home/runner/work/validator/validator/target/site/jacoco/**
+          dest: jacoco-report.zip
