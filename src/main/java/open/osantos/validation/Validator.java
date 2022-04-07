@@ -125,7 +125,7 @@ public class Validator {
      * @return this
      */
     public Validator required() {
-        if (ObjectUtils.isEmpty(this.validee)) {
+        if (ObjectUtils.isEmpty(this.validee) || (validee instanceof String && StringUtils.isBlank(String.valueOf(validee)))) {
             val builder = new StringBuilder();
             builder.append(invalidPrefix());
             builder.append("It is a mandatory field.");

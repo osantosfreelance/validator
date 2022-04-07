@@ -1,7 +1,10 @@
 package open.osantos.validation.exception;
 
+import lombok.Getter;
+
 import javax.net.ssl.HttpsURLConnection;
 
+@Getter
 public class ValidationException extends RuntimeException {
 
     private static final int code = HttpsURLConnection.HTTP_BAD_REQUEST;
@@ -10,9 +13,9 @@ public class ValidationException extends RuntimeException {
     private String jsonNode;
     private String apiName;
 
-    public ValidationException(String message, String jsonNode, String apiName) {
+    public ValidationException(String apiName, String message, String jsonNode) {
+        this.apiName = apiName;
         this.message = message;
         this.jsonNode = jsonNode;
-        this.apiName = apiName;
     }
 }
