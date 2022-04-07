@@ -47,4 +47,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: jacoco-coverage-report.html
-          path: /target/site/jacoco/index.html
+          path: /home/runner/work/validator/validator/target/site/jacoco/index.html
