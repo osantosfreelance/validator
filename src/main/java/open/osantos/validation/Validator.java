@@ -18,7 +18,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * Utility Class for doing validations for CSIHubAPI
+ * Utility Class for doing validations
  * This Standardises specific Validation Checks done on JSON Models
  *
  * This class is very versatile. Please feel free to contribute
@@ -42,7 +42,7 @@ import java.util.stream.Collectors;
  *  If your Validation Method STATIC, Instantiate this Util on Method Level
  *  If your Validation Class is a POJO, you can do either once above or Instantiate this Util on Declaration or Constructor
  *
- * @author OlieSantos <WR10EE:Olie.Santos@ing.com> 03/03/2021
+ * @author OlieSantos <oliesantosfreelance@gmail.com> 03/03/2021
  *
  */
 @Slf4j
